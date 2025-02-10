@@ -22,6 +22,7 @@
     }
 
     /* Left Illustration Section */
+    
     .left-illustration {
       position: fixed; /* Sticks to the left, top, and bottom edges */
       top: 0;
@@ -37,8 +38,10 @@
     }
 
     .left-illustration img {
-      height: 100%; /* Ensures it stretches vertically */
-      object-fit: cover; /* Maintains the aspect ratio */
+      width: 100%; /* Ensures the image spans the full width */
+      height: 100%; /* Ensures the image spans the full height */
+      object-fit: cover; /* Ensures the image fills the space without distortion */
+      object-position: center; /* Centers the image within the container */
     }
 
     /* Right Content Section */
@@ -56,7 +59,7 @@
     .right-illustration {
       position: absolute;
       top: 3rem;
-      right: 3rem;
+      left: 55%;
       margin: 0; /* Remove default margin */
       width: 80%; /* Adjust as needed */
       max-width: 400px;
@@ -111,45 +114,48 @@
 
     /* SVG Icons Section */
     .icons {
-      display: flex;
       position: absolute;
-      justify-content: center;
-      gap: 20px;
-      bottom: 10%;
+      bottom: 15%;
+      left: 55%;
+      display: flex;
+      justify-content: left;
+      gap: 40px;
+      width: 400px;
       margin: 0;
     }
 
+    /* Each icon container is 40×40px */
     .icon {
-      width: 50px;
-      height: 50px;
-      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
       cursor: pointer;
+      transition: transform 0.3s ease;
     }
 
     .icon:hover {
-      filter: none; /* Removes grayscale when hovering */
-      transform: scale(1.1); /* Adds a slight scaling effect */
+      transform: scale(1.1); 
     }
 
-    .icon svg {
+    .icon img {
       width: 100%;
       height: 100%;
-      filter: grayscale(100%); /* Starts with grayscale */
-      transition: all 0.3s ease;
+      filter: grayscale(100%) brightness(2) contrast(100%);
+      transition: filter 0.3s ease;
     }
 
-    .icon:hover svg {
-      filter: none; /* Reveals colored version */
+    #githubLogo img{
+      filter: grayscale(100%) brightness(5) contrast(100%);
+    }
+
+    .icon:hover img {
+      filter: grayscale(0%) brightness(100%) contrast(100%);
+    }
+
+    #githubLogo:hover img{
+      filter: grayscale(0%) brightness(100%) contrast(100%);
     }
     
-    .left-illustration img {
-      width: 100%; /* Ensures the image spans the full width */
-      height: 100%; /* Ensures the image spans the full height */
-      object-fit: cover; /* Ensures the image fills the space without distortion */
-      object-position: center; /* Centers the image within the container */
-    }
 
-    /* Loader Styling */
   #loader {
     position: fixed;
     top: 0;
@@ -222,8 +228,18 @@
     <!-- SVG Icons -->
     <div class="icons">
       <!-- Icon 1 -->
-      
-      
+      <div class="icon">
+        <img src="src/assets/XiaohongshuLOGO.svg" alt="Xiaohongshu Logo 1">
+      </div>
+      <div class="icon">
+        <img src="src/assets/XiaohongshuLOGO.svg" alt="Xiaohongshu Logo 2">
+      </div>
+      <div class="icon" id="githubLogo">
+        <img src="src/assets/githubLOGO.svg" alt="GitHub Logo">
+      </div>
+      <div class="icon">
+        <img src="src/assets/discordLOGO.svg" alt="Discord Logo">
+      </div>
     </div>
   </div>
 
