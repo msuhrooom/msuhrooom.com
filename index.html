@@ -115,13 +115,13 @@
     /* SVG Icons Section */
     .icons {
       position: absolute;
-      bottom: 15%;
+      top: 80%;
       left: 55%;
+      margin: 0;
       display: flex;
       justify-content: left;
       gap: 40px;
       width: 400px;
-      margin: 0;
     }
 
     /* Each icon container is 40×40px */
@@ -152,7 +152,7 @@
     }
 
     #githubLogo:hover img{
-      filter: grayscale(0%) brightness(100%) contrast(100%);
+      filter: grayscale(100%) brightness(5) contrast(100%);
     }
     
 
@@ -193,6 +193,48 @@
     display: none;
   }
 
+  /* For screen widths up to 768px, adjust layout */
+  @media (max-width: 768px) {
+    .left-illustration {
+      width: 30%;              /* Smaller to free up more space */
+    }
+    .left-illustration img {
+      object-position: right;  /* Focus on the right side of the image */
+    }
+    
+    .content {
+      margin-left: 30%;  /* Or even 0% if you want to overlay */
+      width: 70%;
+    }
+
+    /* Example: convert .welcome from absolute to relative */
+    .welcome {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin: 1rem auto;
+      transform: none;
+      text-align: center;
+      width: 90%;
+    }
+
+    /* Similarly for .about-me, .icons, etc. */
+    .about-me {
+      position: relative;
+      top: auto;
+      left: auto;
+      margin: 1rem auto;
+      width: 90%;
+    }
+
+    .icons {
+      position: relative;
+      bottom: auto;
+      margin: 2rem auto;
+    }
+  }
+
+
     
   </style>
 </head>
@@ -228,17 +270,24 @@
     <!-- SVG Icons -->
     <div class="icons">
       <!-- Icon 1 -->
+      <a href ="https://www.xiaohongshu.com/user/profile/645b10600000000029014430?xsec_token=YB9fPXkY-PJUJ47gts6VZ-zhxTbrQc4eCYxECbjXKhSQU=&xsec_source=app_share&xhsshare=CopyLink&appuid=645b10600000000029014430&apptime=1739195531&share_id=49a48e5f2d784bac8ed9a97a007d6571"
+         target="_blank"
+         class="icon">
+        <img src="src/assets/XiaohongshuLOGO.svg" alt="Xiaohongshu Logo 1"></a>
+        
+      <a href="https://www.xiaohongshu.com/user/profile/5a0be74311be10263a72d2ed?xsec_token=YBbjxSd9I1qBEUTUd7hwD64y4PBycjZtYO8GMIBORLrwM=&xsec_source=app_share&xhsshare=CopyLink&appuid=5a0be74311be10263a72d2ed&apptime=1739195435&share_id=5c41ff1eaf6e4ecb99b844165542d41e"
+           target="_black"
+           class="icon"><img src="src/assets/XiaohongshuLOGO.svg" alt="Xiaohongshu Logo 2"></a>
+
+      <a href = "https://github.com/msuhrooom"
+           id = "githubLogo"
+           target="_black"
+           class="icon"><img src="src/assets/githubLOGO.svg" alt="GitHub Logo"></a>
+
       <div class="icon">
-        <img src="src/assets/XiaohongshuLOGO.svg" alt="Xiaohongshu Logo 1">
-      </div>
-      <div class="icon">
-        <img src="src/assets/XiaohongshuLOGO.svg" alt="Xiaohongshu Logo 2">
-      </div>
-      <div class="icon" id="githubLogo">
-        <img src="src/assets/githubLOGO.svg" alt="GitHub Logo">
-      </div>
-      <div class="icon">
-        <img src="src/assets/discordLOGO.svg" alt="Discord Logo">
+        <a href="http://discord.com/users/770774543148384256"
+        target="_black"
+        class="icon"><img src="src/assets/discordLOGO.svg" alt="Discord Logo"></a>
       </div>
     </div>
   </div>
