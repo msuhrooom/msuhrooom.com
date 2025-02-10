@@ -1,7 +1,9 @@
-Msuhrooom's Portfolio
+# msuhrooom.com
 
-Welcome to Msuhrooom, a personal portfolio showcasing digital illustrations, short mangas, and coding projects.
+![Website Screenshot](src/assets/preview.png)
 
-![Website Screenshots](assets/preview.png)
+Check out the full website [here](https://msuhrooom.com).
+
+
 
 
